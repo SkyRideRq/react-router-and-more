@@ -20,11 +20,7 @@ class Post extends Component {
         const post = this.state.post ? (
             <div 
                 className="post" 
-                style={{
-                    height:'100vh',
-                    backgroundImage: "url(" + Blue + ")",
-                    backgroundSize: "cover"
-                }}>
+                >
                 <h4 className="center">{this.state.post.title}</h4>
                 <p>{this.state.post.body}</p>
             </div>
@@ -32,7 +28,11 @@ class Post extends Component {
             <div className="center">Wczytywanie...</div>
         )
         return (
-            <div className="container">
+            <div className="container" style={{
+                    height:'90vh',
+                    backgroundImage: "url(" + Blue + ")",
+                    backgroundSize: "cover"
+                }}>
                 {post}
             </div>
         )
